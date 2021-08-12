@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Karla', sans-serif;
+    background-color: #333;
+}
+
+.price {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 250px;
+    width: 600px;
+    height: 450px;
+    background-color: wheat;
+}
+
+.price__header {
+    grid-column: 1 / 4;
+    background-color: coral ;
+}
+
+.price__body {
+    background-color: darkgoldenrod;
+}
+
+.price__aside {
+    background-color: darksalmon;
+}
+
+@media all and (max-width: 800px) {
+    .price {
+        display: flex;
+        flex-flow: column;
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .price {
+        display: flex;
+        flex-flow: column;
+        width: 90%;
+    }
+}
