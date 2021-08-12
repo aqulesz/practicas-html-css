@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    padding: 0 2rem;
+    margin: 0
+}
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin-bottom: 1rem;
+    max-width: 450px;
+}
+
+.header__title {
+    font-size: 1.5rem;
+}
+
+.title--light {
+    display: block;
+    font-weight: 200;
+}
+
+.title--bold {
+    font-weight: 600;
+}
+
+.header__subtitle {
+    font-size: .8rem;
+}
+
+.text--light {
+    color: hsl(229, 6%, 66%);
+}
+
+.cards {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 4px 7px 10px hsl(234 12% 34% / 0.2);
+}
+
+.card__title {
+    font-size: 1rem;
+}
+
+.card__body {
+    margin-bottom: 1rem;
+}
+
+.card__text {
+    font-size: .8rem;
+}
+
+.card__footer {
+    align-self: flex-end;
+}
+
+.card__icon {
+    width: 50px;
+}
+
+.card--cyan {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card--red {
+    border-top: 4px solid hsl(0, 78%, 62%) ;
+}
+
+.card--yellow {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card--blue {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+@media screen and (min-width:700px) {
+    body {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 0 5rem;
+    }
+
+    .cards {
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 600px;
+    }
+
+    .card {
+        margin: 1rem;
+        padding: .5rem 1rem;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .header__title {
+        font-size: 1.8rem;
+    }
+
+    .header__subtitle {
+        font-size: .8rem;
+    }
+
+    .cards {
+        width: 900px
+    }
+
+    .card__title {
+        font-size: .9rem;
+        margin-bottom: 0;
+    }
+        
+    .card__text {
+        font-size: .7rem;
+    }
+
+    .card__icon {
+        width: 40px;
+    }
+
+    .card--yellow {
+        order: 1;
+    }
+
+    .card--blue,
+    .card--cyan {
+        position: relative;
+        top: 100px;
+    }
+}
